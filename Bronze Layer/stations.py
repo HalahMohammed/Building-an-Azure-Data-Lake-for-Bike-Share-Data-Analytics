@@ -6,3 +6,5 @@ option('inferSchema','false')\
 .toDF(*column_names)
 df.write.format('delta').save('/FileStore/delta_stations')
 df.display()
+df=spark.read.format('delta').option('header', 'true').load('/FileStore/delta_stations')
+df.write.format('delta').saveAsTable('station_table')
