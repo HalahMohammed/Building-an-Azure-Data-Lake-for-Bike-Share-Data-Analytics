@@ -15,3 +15,6 @@ df.write.format('delta') \
     .save('/FileStore/delta_payments')
 
 display(df)
+
+df=spark.read.format('delta').option('header', 'true').load('/FileStore/delta_payments')
+df.write.format('delta').saveAsTable('delta_table')
