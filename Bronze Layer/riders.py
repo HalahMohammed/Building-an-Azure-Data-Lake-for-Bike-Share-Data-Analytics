@@ -8,3 +8,6 @@ df=spark.read.format('csv')\
 .toDF(*column_names)
 df.write.format('delta').option('mergeSchema','true').mode('overwrite').save('/FileStore/delta_riders')
 df.display()
+
+df=spark.read.format('delta').option('header', 'true').load('/FileStore/delta_riders')
+df.write.format('delta').saveAsTable('rider_table')
