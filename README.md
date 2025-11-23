@@ -22,11 +22,11 @@ Divvy is a bike sharing program in Chicago that allows riders to:
 - Silver Layer (Cleaned Data)
 - Gold Layer (Business-ready Data)
 
-# Data Model :
+## Data Model :
 
 The solution processes the following tables:
 
-# Source Tables:
+## Source Tables:
 
 Rider: Fake rider profiles (synthetic data)
 
@@ -38,14 +38,10 @@ Trip: Actual Divvy bikeshare trip data
 
 Station: Bike station location and information
 
-# Target Star Schema:
+## Target Star Schema:
 
 - Fact Tables: Trip facts, Payment facts
 
 - Dimension Tables: Date, Rider, Station, Account, Time
 
 
-
-Apache Spark 3.0+
-
-Delta Lake
