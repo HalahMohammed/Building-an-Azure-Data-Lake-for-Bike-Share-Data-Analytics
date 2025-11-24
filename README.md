@@ -24,24 +24,19 @@ Divvy is a bike sharing program in Chicago that allows riders to:
 
 ## Data Model :
 
-The solution processes the following tables:
+The dataset consists of the following tables:
 
-## Source Tables:
+## Dimension Tables
 
-Rider: Fake rider profiles (synthetic data)
+Riders: Rider demographic information and membership details
 
-Account: Fake account information (synthetic data)
+Stations: Bike station locations and details
 
-Payment: Fake payment transaction data (synthetic data)
+Date: Time dimension for temporal analysis
 
-Trip: Actual Divvy bikeshare trip data
+## Fact Tables :
 
-Station: Bike station location and information
+Trips: Bike trip transactions with duration and routing
 
-## Target Star Schema:
-
-- Fact Tables: Trip facts, Payment facts
-
-- Dimension Tables: Date, Rider, Station, Account, Time
-
+Payments: Payment transactions linked to riders
 
